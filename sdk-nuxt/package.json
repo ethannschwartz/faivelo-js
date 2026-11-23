@@ -1,6 +1,6 @@
 {
   "name": "@faivelo/nuxt",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Send transactional email from your own domain in Nuxt with an auto-imported sendEmail(), receive replies and bounces as typed signed webhooks, and preview every email in a local dev outbox and Nuxt DevTools tab before you add an API key. Official Faivelo module.",
   "keywords": [
     "nuxt",
@@ -65,7 +65,7 @@
   "dependencies": {
     "@nuxt/kit": "^4.0.0",
     "defu": "^6.1.4",
-    "faivelo": "^0.8.0",
+    "faivelo": ">=0.8.0 <1",
     "h3": "^1.13.0"
   },
   "devDependencies": {

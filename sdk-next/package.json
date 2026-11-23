@@ -1,6 +1,6 @@
 {
   "name": "@faivelo/next",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Email for Next.js on your own domain: sendEmail() with React Email, typed signed webhooks for replies and delivery events, and a dev outbox that works before you have an API key. Built on the official Faivelo SDK.",
   "keywords": [
     "nextjs",
@@ -59,7 +59,7 @@
     "prepublishOnly": "npm run typecheck && npm run build && npm test"
   },
   "dependencies": {
-    "faivelo": "^0.8.0"
+    "faivelo": ">=0.8.0 <1"
   },
   "peerDependencies": {
     "@react-email/render": ">=1.0.0",
