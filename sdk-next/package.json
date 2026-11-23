@@ -1,0 +1,87 @@
+{
+  "name": "@faivelo/next",
+  "version": "0.1.0",
+  "description": "Email for Next.js on your own domain: sendEmail() with React Email, typed signed webhooks for replies and delivery events, and a dev outbox that works before you have an API key. Built on the official Faivelo SDK.",
+  "keywords": [
+    "nextjs",
+    "next",
+    "next.js",
+    "app router",
+    "server actions",
+    "route handlers",
+    "email",
+    "send email",
+    "transactional email",
+    "email api",
+    "react email",
+    "inbound email",
+    "receive email",
+    "email webhooks",
+    "email testing",
+    "email preview",
+    "nodemailer alternative",
+    "custom domain email",
+    "faivelo"
+  ],
+  "homepage": "https://faivelo.com/docs/developers/nextjs/?via=npm",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethannschwartz/faivelo-js.git",
+    "directory": "sdk-next"
+  },
+  "bugs": {
+    "email": "support@faivelo.com",
+    "url": "https://faivelo.com/docs/developers/nextjs/"
+  },
+  "license": "MIT",
+  "author": "Faivelo (https://faivelo.com)",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean --external @react-email/render",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.mjs",
+    "prepublishOnly": "npm run typecheck && npm run build && npm test"
+  },
+  "dependencies": {
+    "faivelo": "^0.8.0"
+  },
+  "peerDependencies": {
+    "@react-email/render": ">=1.0.0",
+    "next": ">=14.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@react-email/render": {
+      "optional": true
+    },
+    "next": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@react-email/render": "^1.0.0",
+    "@types/node": "^22.0.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

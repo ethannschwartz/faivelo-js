@@ -1,0 +1,81 @@
+{
+  "name": "@faivelo/nuxt",
+  "version": "0.1.0",
+  "description": "Send transactional email from your own domain in Nuxt with an auto-imported sendEmail(), receive replies and bounces as typed signed webhooks, and preview every email in a local dev outbox and Nuxt DevTools tab before you add an API key. Official Faivelo module.",
+  "keywords": [
+    "nuxt",
+    "nuxt-module",
+    "nuxt3",
+    "nuxt4",
+    "nitro",
+    "email",
+    "send email",
+    "transactional email",
+    "email api",
+    "inbound email",
+    "receive email",
+    "email webhooks",
+    "email testing",
+    "email preview",
+    "dev outbox",
+    "nuxt devtools",
+    "nodemailer alternative",
+    "custom domain email",
+    "faivelo"
+  ],
+  "homepage": "https://faivelo.com/docs/developers/nuxt/?via=npm",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethannschwartz/faivelo-js.git",
+    "directory": "sdk-nuxt"
+  },
+  "bugs": {
+    "email": "support@faivelo.com",
+    "url": "https://faivelo.com/docs/developers/nuxt/"
+  },
+  "license": "MIT",
+  "author": "Faivelo (https://faivelo.com)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.mts",
+      "import": "./dist/module.mjs"
+    }
+  },
+  "main": "./dist/module.mjs",
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/types.d.mts"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build prepare && nuxt-module-build build",
+    "build": "nuxt-module-build prepare && nuxt-module-build build",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+    "dev": "nuxi dev playground",
+    "typecheck": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi typecheck playground"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^4.0.0",
+    "defu": "^6.1.4",
+    "faivelo": "^0.8.0",
+    "h3": "^1.13.0"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "^1.0.0",
+    "@types/node": "^22.0.0",
+    "nuxt": "^4.0.0",
+    "typescript": "^5.5.0",
+    "vue-tsc": "^3.3.14"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
